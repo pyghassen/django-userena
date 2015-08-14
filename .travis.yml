@@ -28,7 +28,12 @@ env:
   - TOX_ENV=py34-django18
 
   - TOX_ENV=coverage
+
 install:
   - pip install tox==1.8.1
+
+after_install:
+  - /home/travis/build/pyghassen/django-userena/.tox/$TOX_ENV/bin/python --version
+
 script:
   - tox -e $TOX_ENV
