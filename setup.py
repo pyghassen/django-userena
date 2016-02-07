@@ -11,7 +11,12 @@ except IOError:
         "``long_description`` (%s)\n" % readme_file)
     sys.exit(1)
 
-install_requires = ['easy_thumbnails', 'django-guardian', 'html2text==2014.12.29']
+install_requires = [
+    'easy_thumbnails',
+    'django-guardian<=1.3.1',
+    'html2text==2014.12.29'
+]
+
 try:
     from collections import OrderedDict
 except ImportError:
@@ -33,9 +38,20 @@ setup(name='django-userena',
       classifiers = ['Development Status :: 4 - Beta',
                      'Environment :: Web Environment',
                      'Framework :: Django',
+                     'Framework :: Django :: 1.4',
+                     'Framework :: Django :: 1.5',
+                     'Framework :: Django :: 1.6',
+                     'Framework :: Django :: 1.7',
                      'Intended Audience :: Developers',
                      'License :: OSI Approved :: BSD License',
                      'Operating System :: OS Independent',
                      'Programming Language :: Python',
+                     'Programming Language :: Python :: 2',
+                     'Programming Language :: Python :: 2.6',
+                     'Programming Language :: Python :: 2.7',
+                     'Programming Language :: Python :: 3',
+                     'Programming Language :: Python :: 3.2',
+                     'Programming Language :: Python :: 3.3',
+                     'Programming Language :: Python :: 3.4',
                      'Topic :: Utilities'],
       )
